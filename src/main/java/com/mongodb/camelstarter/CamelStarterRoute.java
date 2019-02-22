@@ -15,8 +15,8 @@ public class CamelStarterRoute extends RouteBuilder {
         System.out.println("Hello, World!");
         printBeans.printBeans();
 
-        //from("direct:findById")
-        //.to("mongodb3:mongoBean?database=flights&collection=tickets&operation=findById")
-        //.to("mock:resultFindById");
+        from("direct:findById")
+        .to("mongodb3:mongoBean?database=flights&collection=tickets&operation=findById")
+        .to("mock:resultFindById");
     }
 }
